@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+$black: #191C27;
+$grey-dark: #20222E;
+$grey-mid: #707070;
+$grey-blue: #454E5E;
+$purple: #8E3BFF;
+$purple-light: #7566EF;
+$blue-light: #726DED;
+$blue-mid: #534ED6;
+$navy-dark: #152237;
+$white: #FFFFFF;
+$white-ter: #f7f7f7;
+$dark-white: rgba(255,255,255,.6);
+$gold: #FFD35A;
+$blue: #152238;
+$crimson: #DC143C;
+$green: #4CBB17;
+$highlight: #FCF0DD;
+$galactic: linear-gradient($blue-light, $blue-mid);
+$galactic-right: linear-gradient(90deg, $purple-light, $gold);
+$galactic-reverse: linear-gradient($blue-mid, $blue-light);
+$gradient-black: linear-gradient(90deg, $black, #25293d, $black);
+
+$fs-giant: 5rem; //80px
+$fs-0: 3.75rem; //60px
+$fs-1: 2.5rem; //40px
+$fs-2: 2rem; //32px;
+$fs-3: 1.5rem; //24px;
+$fs-4: 1.25rem; //20px;
+$fs-5: 1.125rem; //18px
+$fs-6: 1rem; //16px
+$fs-7: .875rem; //14px
+$fs-8: .675rem; //11.2px
+
+$ff-main: "Inter", sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+
+$desktop: 1230px;
+$tablet: 1023px;
+$tablet-portrait: 860px;
+$tablet-small: 700px;
+$mobile: 499px;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" {% include "page-class.njk" %} >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <title>{% include "header/uniqueTitle.njk" %}</title>
+
+        {% include "header/social.njk" %}
+
+        {% if noindex %}
+        <meta name="robots" content="noindex" />
+        {% endif %}
+
+        <link rel="stylesheet" href="{{ '/style/style.css' | url }}">
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SYFV38XQS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1SYFV38XQS');
+    </script>
+    
+    <body>
+        {% include "header.njk" %}
+        
+        <main{% if centered %} class="text-centered" {% endif %}>
+            {{ content | safe }}
+        </main>
+
+        {% include "mobile-menu.njk" %}
+        {% include "footer.njk" %}
+        <script src="/scripts/app.js"></script>
+    </body>
+</html>

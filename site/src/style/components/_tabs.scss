@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../utilities/mixins' as m;
+
+#page-calculator {
+    .tabs {
+        width: 100%;
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding-left: 0;
+            background: $grey-blue;
+            padding: .15rem;
+            margin-top: 0;
+            border-radius: 8px;
+            
+            @include m.mobile-max {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            li {
+                list-style: none;
+                flex: 1;
+                
+                a {
+                    $color: $grey-dark;
+                    display: block;
+                    text-decoration: none;
+                    color: $grey-dark;
+                    padding: 10px 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-radius: 6px;
+                    transition: all 0.3s ease-in-out;
+                    position: relative;
+
+                    &:not(.active):hover {
+                        background: darken($grey-blue, 4%);
+                    }
+
+                    &.active {
+                        background: $galactic;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

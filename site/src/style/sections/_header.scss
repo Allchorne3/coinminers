@@ -1,0 +1,154 @@
+@use '../abstracts/variables' as *;
+@use '../utilities/mixins' as m;
+
+header {
+    width: 100%;
+    min-height: 5rem;
+    padding-inline: 2rem;
+    background: $gradient-black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 9px 5px -7px (rgba(0, 0, 0, .6));
+    z-index: 999;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba($purple-light, .5);
+        transform: scaleX(0);
+        transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: scaleX(1);
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+    
+    @include m.tablet-small-max {
+        &::before {
+            transform: scaleX(1);
+        }
+
+        justify-content: center;
+    }
+    
+    // Main nav
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+                
+                a {
+                    text-decoration: none;
+                    font-size: 1rem;
+                color: $white;
+                }
+            }
+        }
+
+        @include m.tablet-small-max {
+            display: none;
+        }
+    }
+
+    // Calculator Button
+    aside a.button {
+        background: $navy-dark;
+        border: solid 1px $grey-mid;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background: $purple-light;
+            border-color: $blue-mid;
+        }
+
+        @include m.tablet-small-max {
+            display: none;
+        }
+    }
+
+    // i.nav-hamburger {
+    //     font-size: $fs-2;
+        
+    //     @include m.tablet-small-min {
+    //         display: none;
+    //     }
+    // }
+}
+
+// .mobile-nav {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 999;
+//     background: $gradient-black;
+//     padding: 2rem 2rem 4rem 4rem;
+//     overflow: hidden;
+//     opacity: 0;
+//     pointer-events: none;
+
+//     display: flex;
+//     align-items: flex-end;
+//     transition: all .3s ease-in-out;
+
+//     ul {
+//         position: relative;
+
+//         &::before {
+//             content: 'Q';
+//             position: absolute;
+//             font-size: 15rem;
+//             font-family: $ff-secondary;
+//             top: -170px;
+//             left: 66px;
+//             color: rgba($white-ter, .05);
+//         }
+//     }
+
+//     li {
+//         &:not(:last-child) {
+//             margin-bottom: .5rem;
+//         }
+
+//         a {
+//             display: inline-block;
+//             color: $white-ter;
+//             text-decoration: none;
+//             font-size: $fs-0;
+//             font-family: $ff-secondary;
+//         }
+//     }
+
+//     i.close-menu {
+//         font-size: $fs-1;
+//         position: absolute;
+//         top: 2rem;
+//         right: 2rem;
+//     }
+
+//     &.active {
+//         opacity: 1;
+//         pointer-events: all;
+//     }
+
+//     @include m.tablet-small-min {
+//         display: none;
+//     }
+// }

@@ -1,0 +1,114 @@
+@use '../abstracts/variables' as *;
+@use '../utilities/mixins' as m;
+
+footer {
+    background: $black;
+    border-top: solid 1px rgba($purple-light, .5);
+    margin-top: 6rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 3rem;
+
+        & div:first-child {
+            flex: 1;
+        }
+
+        @include m.desktop-max {
+            padding-inline: 2rem;
+        }
+
+        @include m.until(850px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: $fs-6;
+            font-weight: $fw-semi-bold;
+            letter-spacing: 1px;
+            padding-bottom: .2rem;
+            border-bottom: solid 1px $white-ter;
+            display: inline-block;
+        }
+
+        .form-events {
+            margin-top: .05rem;
+            gap: .3rem;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-left: 2rem;
+            margin-bottom: auto;
+
+            @include m.until(850px) {
+                flex-direction: column;
+                gap: 3rem;
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+
+            .footer-post {
+                h5 {
+                    font-size: $fs-6;
+                    margin-bottom: .3rem;
+                    margin-top: 1.2rem;
+                    font-weight: $fw-regular;
+
+                    a {
+                        color: $white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $gold;
+                        }
+                    }
+                }
+
+                p {
+                    color: $purple-light;
+                }
+
+                max-width: 25ch;
+
+                @include m.tablet-small-max {
+                    max-width: 60ch;
+                }
+            }
+            
+            .sitemap {
+                
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .created {
+        text-align: left;
+        background: darken($black, 2%);
+        padding-block: 1rem;
+
+        @include m.tablet-small-max {
+            text-align: center;
+        }
+
+        @include m.tablet-small-max {
+            padding-bottom: 75px;
+        }
+    }
+}

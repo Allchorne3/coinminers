@@ -1,0 +1,43 @@
+<footer id="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div>
+				<a href="/">
+					<img src="/assets/images/logo.svg" class="logo svg" alt="Logo">
+				</a>
+			</div>
+
+			<div>
+				<h4>Contact</h4>
+				<form name="contact" method="POST" netlify data-netlify="true" data-netlify-honeypot="bot-field" action="/success/" id="contact-form">
+					<input class="hidden" name="bot-field">
+					<input type="text" placeholder="Name*" name="name" required />
+					<input type="email" placeholder="Email address*" name="email" required />
+					<textarea cols="30" rows="5" placeholder="Message*" name="message" required></textarea>
+					{% include "form-events.njk" %}
+				</form>
+			</div>
+
+			<div class="footer-right">
+				<div class="footer-post">
+					<h4>Latest guide</h4>
+
+					{% for post in collections.post | reverse | limiter(1) %}
+						<h5><a class="snippet-title" href="{{ post.url }}">{{ post.data.title }}</a></h5>
+						<p class="snippet-date">{{ post.data.date  | prettyDate }}</p>
+					{% endfor %}
+				</div>
+
+				<div class="sitemap">
+					<h4>Sitemap</h4>
+					<ul>
+						<li><a href="/" class="link">Home</a></li>
+						<li><a href="/guides/" class="link">Guides</a></li>
+						<li><a href="/calculator/" class="link">Calculator</a></li>
+						<li><a href="/commission-calculator/" class="link">Commission</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

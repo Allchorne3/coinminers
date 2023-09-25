@@ -1,0 +1,143 @@
+@use '../abstracts/variables' as *;
+
+.hidden {
+    display: none;
+}
+
+.notification {
+    color: $black;
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: $fw-semi-bold;
+    
+    &.success {
+        background: $green;
+    }
+    
+    &.error {
+        background: $crimson;
+        color: $white;
+    }
+}
+
+.error-message {
+    background: $crimson;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    max-width: 354px;
+    margin: 0 auto 1rem;
+}
+
+.error {
+    border: solid 1px $crimson !important;
+}
+
+.row-active {
+    background: orange !important;
+    color: $blue;
+}
+
+.row-aim {
+    background: green !important;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.is-centered {
+    justify-content: center;
+}
+
+.galactic {
+    background: linear-gradient($blue-light, transparent) $blue-mid;
+
+    &:hover, &:focus {
+        background-color: $purple-light;
+    }    
+}
+
+p.subtitle {
+    color: $dark-white;
+}
+
+.text {
+    p {
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+.card {
+    position: relative;
+    isolation: isolate;
+    border-radius: 15px;
+    padding: 1rem;
+    background: $grey-dark;
+    border: solid 1px $blue-light;
+    color: $white-ter;
+
+    &::before {
+        position: absolute;
+        border-radius: inherit;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(
+            800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+        );
+        opacity: 0;
+        transition: opacity .3s;
+        z-index: -1;
+    }
+    
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &.single {
+        max-width: 430px;
+    }
+    
+}
+
+.link {
+    position: relative;
+    color: $white;
+    text-decoration: none;
+
+    &.gold {
+        color: $gold;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 1px;
+        background: white;
+        border-radius: 3px;
+        pointer-events: none;
+        transform-origin: 100% 50%;
+        transform: scale3d(0,1,1);
+        transition: transform .3s cubic-bezier(.33,0,0,1);
+    }
+
+    &[aria-current="page"]::before,
+    &:hover::before {
+        transform-origin: 0% 50%;
+        transform: scaleZ(1);
+    }
+    
+    &.active::before {
+        transform: scaleZ(1);
+    }
+}

@@ -1,0 +1,113 @@
+@use '../abstracts/variables' as *;
+@use '../utilities/mixins' as m;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 1rem;
+    margin-bottom: .6rem;
+    grid-template-columns: 1fr;
+
+    & > div {
+        text-align: left;
+        
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            display: inline-block;
+            text-align: left;
+            font-weight: $fw-light;
+    
+            & > small {
+                text-transform: lowercase;
+            }
+    
+            small {
+                font-style: italic;
+            }
+    
+            @include m.mobile-max {
+                display: block;
+            }
+        }
+
+        &:last-child {
+            grid-column: 1 / -1 !important;
+        }
+    }
+    
+    @include m.desktop-max {
+        &.calculator-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            & > div:nth-child(5) {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+        
+    @include m.tablet-small-max {
+        &.calculator-form {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+        
+    .form-events {
+        display: flex !important;
+        gap: 15px;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px 15px;
+        background: $grey-blue;
+        transition: all 0.3s ease-in-out;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        width: 100%;
+
+            
+        option,
+        & {
+            color: $white !important;
+        }
+    }
+    
+    input,
+    textarea {
+        width: 100%;
+        
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        &[type="submit"],
+        &[type="reset"] {
+            text-transform: uppercase;
+            font-weight: $fw-medium;
+        }
+
+        &[type="reset"] {
+            $color: $white-ter;
+            background: $color;
+            color: $grey-dark !important;
+        
+            &:hover {
+                background: darken($color, 10%);
+            }
+        }
+
+        &[type="date"] {
+            color: $white;
+        }
+    }
+}
