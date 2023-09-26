@@ -15,7 +15,6 @@
         .main-article {
             border-radius: 25px;
             padding: 3rem;
-            // border: solid 1px $blue-light;
             height: fit-content;
             
             @include m.tablet-max {
@@ -33,7 +32,7 @@
                 font-size: $fs-4;
 
                 &:hover {
-                    color: $purple-light;
+                    color: $green-light;
                 }
                 
                 i {
@@ -44,7 +43,7 @@
         
         .main-article {
             flex: 4;
-            background: $grey-dark;
+            background: $black;
 
             h1 {
                 font-size: $fs-0;
@@ -65,12 +64,16 @@
 
                 &::marker {
                     font-weight: $fw-semi-bold;
-                    color: $purple-light;
+                    color: $green-light;
                 }
             }
 
             a {
                 color: inherit;
+            }
+
+            em strong {
+                color: $green;
             }
         }
 

@@ -7,17 +7,6 @@
 				</a>
 			</div>
 
-			<div>
-				<h4>Contact</h4>
-				<form name="contact" method="POST" netlify data-netlify="true" data-netlify-honeypot="bot-field" action="/success/" id="contact-form">
-					<input class="hidden" name="bot-field">
-					<input type="text" placeholder="Name*" name="name" required />
-					<input type="email" placeholder="Email address*" name="email" required />
-					<textarea cols="30" rows="5" placeholder="Message*" name="message" required></textarea>
-					{% include "form-events.njk" %}
-				</form>
-			</div>
-
 			<div class="footer-right">
 				<div class="footer-post">
 					<h4>Latest guide</h4>
@@ -28,15 +17,12 @@
 					{% endfor %}
 				</div>
 
-				<div class="sitemap">
+				{# <div class="sitemap">
 					<h4>Sitemap</h4>
 					<ul>
 						<li><a href="/" class="link">Home</a></li>
-						<li><a href="/guides/" class="link">Guides</a></li>
-						<li><a href="/calculator/" class="link">Calculator</a></li>
-						<li><a href="/commission-calculator/" class="link">Commission</a></li>
 					</ul>
-				</div>
+				</div> #}
 			</div>
 		</div>
 	</div>

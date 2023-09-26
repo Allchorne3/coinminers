@@ -7,7 +7,7 @@ header {
     padding-inline: 2rem;
     background: $gradient-black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -21,7 +21,7 @@ header {
         left: 0;
         width: 100%;
         height: 1px;
-        background: rgba($purple-light, .5);
+        background: rgba($green-light, .5);
         transform: scaleX(0);
         transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
         transform: scaleX(1);
@@ -43,6 +43,7 @@ header {
     nav {
         ul {
             display: flex;
+            justify-content: center;
 
             li {
                 &:not(:last-child) {
@@ -73,7 +74,7 @@ header {
         transition: all .3s ease-in-out;
 
         &:hover {
-            background: $purple-light;
+            background: $green-light;
             border-color: $blue-mid;
         }
 

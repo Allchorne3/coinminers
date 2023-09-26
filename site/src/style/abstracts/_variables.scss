@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-$black: #191C27;
+$black: #19271c;
 $grey-dark: #20222E;
 $grey-mid: #707070;
 $grey-blue: #454E5E;
 $purple: #8E3BFF;
-$purple-light: #7566EF;
+$green-light: #458e45;
 $blue-light: #726DED;
 $blue-mid: #534ED6;
 $navy-dark: #152237;
@@ -17,10 +17,10 @@ $blue: #152238;
 $crimson: #DC143C;
 $green: #4CBB17;
 $highlight: #FCF0DD;
-$galactic: linear-gradient($blue-light, $blue-mid);
-$galactic-right: linear-gradient(90deg, $purple-light, $gold);
+$galactic: linear-gradient($green-light, $black);
+$galactic-right: linear-gradient(90deg, $green-light, $gold);
 $galactic-reverse: linear-gradient($blue-mid, $blue-light);
-$gradient-black: linear-gradient(90deg, $black, #25293d, $black);
+$gradient-black: linear-gradient(90deg, #19271c, #253d25, #19271c);
 
 $fs-giant: 5rem; //80px
 $fs-0: 3.75rem; //60px
