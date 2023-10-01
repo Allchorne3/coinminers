@@ -74,10 +74,15 @@ p.subtitle {
     position: relative;
     isolation: isolate;
     border-radius: 15px;
-    padding: 1rem;
-    background: $grey-dark;
-    border: solid 1px $blue-light;
+    padding: 3rem;
+    background: $black;
+    border: solid 1px $green-light;
     color: $white-ter;
+    height: fit-content;
+
+    &.p-small {
+        padding: 1.5rem;
+    }
 
     &::before {
         position: absolute;
@@ -139,5 +144,11 @@ p.subtitle {
     
     &.active::before {
         transform: scaleZ(1);
+    }
+}
+
+.pointer {
+    &:hover {
+        cursor: pointer;
     }
 }

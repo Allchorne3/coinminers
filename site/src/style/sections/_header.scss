@@ -7,7 +7,7 @@ header {
     padding-inline: 2rem;
     background: $gradient-black;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -56,26 +56,6 @@ header {
                 color: $white;
                 }
             }
-        }
-
-        @include m.tablet-small-max {
-            display: none;
-        }
-    }
-
-    // Calculator Button
-    aside a.button {
-        background: $navy-dark;
-        border: solid 1px $grey-mid;
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 25px;
-        transition: all .3s ease-in-out;
-
-        &:hover {
-            background: $green-light;
-            border-color: $blue-mid;
         }
 
         @include m.tablet-small-max {

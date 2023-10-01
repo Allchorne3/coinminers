@@ -10,10 +10,13 @@
 @use 'components/buttons';
 @use 'components/logo';
 @use 'components/icons';
+@use 'components/form';
+@use 'components/table';
 
 @use 'pages/not-found';
 @use 'pages/success';
 @use 'pages/index';
+@use 'pages/calculator';
 @use 'pages/post';
 
 @use 'utilities/mixins';

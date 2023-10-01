@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+@use '../utilities/mixins' as m;
+
+body {
+    .calculator {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .pre-text {
+        color: $green-light;
+        font-size: 16px;
+    }
+
+    .table-buttons {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+
+        button {
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            color: $white;
+            background: $green;
+
+            i {
+                margin-left: .3rem;
+            }
+
+            &.table-clear {
+                background: $crimson;
+            }
+        }
+    }
+}
