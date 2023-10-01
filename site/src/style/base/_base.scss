@@ -46,9 +46,10 @@ main {
 
 .hero {
   margin-top: 10rem;
+  margin-bottom: 6rem;
 
   @include m.mobile-max {
-    margin-top: 10rem;
+    margin-bottom: 3rem;
   }
 
   &-body {
@@ -61,7 +62,8 @@ main {
     p {
       font-size: $fs-4;
       font-weight: $fw-light;
-      margin-bottom: 1rem;
+      margin: 0 auto 1rem;
+      max-width: 60ch;
     }
   }
 }
