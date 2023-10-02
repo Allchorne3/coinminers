@@ -24,13 +24,19 @@ form {
                 z-index: 9;
             }
         }
+
+        label {
+            display: block;
+            font-weight: 300;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            color: $white;
+        }
     }
 
     label {
-        display: block;
-        font-weight: 300;
-        margin-bottom: 5px;
-        margin-top: 10px;
+        color: $green;
+        margin-top: 2rem;
     }
     
     input {

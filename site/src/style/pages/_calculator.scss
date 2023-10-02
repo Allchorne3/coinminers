@@ -23,6 +23,12 @@ body {
         list-style: none;
         padding-left: 0;
         margin-top: 0;
+        display: flex;
+        gap: 1.5rem;
+
+        @include m.tablet-small-max {
+            flex-direction: column;
+        }
 
         button {
             border: none;
@@ -37,6 +43,31 @@ body {
 
             &.table-clear {
                 background: $crimson;
+            }
+
+            @include m.tablet-small-max {
+                width: 100%;
+            }
+        }
+
+        li {
+            &:first-child {
+                flex: 1;
+            }
+
+            @include m.tablet-small-max {
+                text-align: center;
+            }
+
+            &:not(:first-child) {
+                background: $green;
+                padding: 10px 15px;
+                border-radius: 5px;
+                
+                h3 {
+                    font-size: 15px;
+                    color: $black;
+                }
             }
         }
     }

@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let earnings;
         const endDateObj = getEndDate(endDate);
         let startDateObj;
+        let daysTotal = document.querySelector('h3#total-days span');
+        let minedTotal = document.querySelector('h3#total-earned span');
 
         earnings = totalMined ? totalMined : 0;
 
@@ -118,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 tbody.appendChild(newRow);
                 table.appendChild(tbody);
             }
+
+            daysTotal.innerHTML = iterations
+            minedTotal.innerHTML = earnings.toFixed(2)
         }
     });
 

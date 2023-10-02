@@ -20,19 +20,20 @@ uniqueTitle: Calculator
                     <input type="number" id="hourly-profit" step="0.01" required />
                 </div>
                 <div class="currency-input">
-                    <label for="total-mined" step="0.01">Current total mined</label>
+                    <label for="total-mined" step="0.01">Current total mined (Optional)</label>
                     <input type="number" id="total-mined" step="0.01" />
-                </div>
-                <div>
-                    <label for="iterations">How many days?</label>
-                    <input type="number" id="iterations" />
                 </div>
                 <div>
                     <label for="start-date">Start date (Optional)</label>
                     <input type="date" id="start-date" />
                 </div>
+                <label>Choose <strong>ONE</strong> of the options</label>
                 <div>
-                    <label for="end-date">End date (Optional)</label>
+                    <label for="iterations">How many days?</label>
+                    <input type="number" id="iterations" />
+                </div>
+                <div>
+                    <label for="end-date">End date</label>
                     <input type="date" id="end-date" />
                 </div>
                 <div id="form-buttons">
@@ -49,6 +50,12 @@ uniqueTitle: Calculator
                         <button class="table-clear">
                             Clear Table <i class="fa-solid fa-circle-xmark"></i>
                         </button>
+                    </li>
+                    <li>
+                        <h3 id="total-days"><span></span> Days</h3>
+                    </li>
+                    <li>
+                        <h3 id="total-earned">£<span></span> Mined</h3>
                     </li>
                 </ul>
 
