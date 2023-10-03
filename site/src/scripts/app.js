@@ -9,8 +9,14 @@ const table = document.querySelector('table')
 const form = document.querySelector('form');
 
 // Table specific buttons
-const tableBtns = document.querySelector('.table-buttons')
+const moneyInfo = document.querySelector('.money-info')
 const tableClearBtn = document.querySelector('.table-clear')
+
+let perHour = document.querySelector('#per-hour span')
+let perDay = document.querySelector('#per-day span')
+let perWeek = document.querySelector('#per-week span')
+let perMonth = document.querySelector('#per-month span')
+let perYear = document.querySelector('#per-year span')
 
 // Clear the table
 const clearTable = () => {
@@ -93,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#end-date').classList.remove('error');
 
             table.classList.remove('hidden')
-            tableBtns.classList.remove('hidden')
+            moneyInfo.classList.remove('hidden')
             preText.classList.add('hidden')
 
             if (startDate) {
@@ -121,14 +127,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 table.appendChild(tbody);
             }
 
-            daysTotal.innerHTML = iterations
-            minedTotal.innerHTML = earnings.toFixed(2)
+            daysTotal.textContent = iterations
+            minedTotal.textContent = earnings.toFixed(2)
+            perHour.textContent =`£${hourlyProfit.toFixed(2)}`
+            perDay.textContent =`£${(hourlyProfit * 24).toFixed(2)}`
+            perWeek.textContent =`£${(hourlyProfit * 168).toFixed(2)}`
+            perMonth.textContent =`£${(hourlyProfit * 720 ).toFixed(2)}`
+            perYear.textContent =`£${(hourlyProfit * 8760).toFixed(2)}`
         }
     });
 
     // Hide the table
     tableClearBtn.addEventListener('click', () => {
-        tableBtns.classList.add('hidden')
+        moneyInfo.classList.add('hidden')
         table.classList.add('hidden')
         preText.classList.remove('hidden')
     })

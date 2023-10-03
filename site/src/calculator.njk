@@ -45,19 +45,40 @@ uniqueTitle: Calculator
 
         <div class="table card p-small">
             <table class="hidden">
-                <ul class="table-buttons hidden">
-                    <li>
-                        <button class="table-clear">
-                            Clear Table <i class="fa-solid fa-circle-xmark"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <h3 id="total-days"><span></span> Days</h3>
-                    </li>
-                    <li>
-                        <h3 id="total-earned">£<span></span> Mined</h3>
-                    </li>
-                </ul>
+                <div class="money-info hidden">
+                    <div class="rates">
+                        <ul>
+                            <li>
+                                <h3 id="per-hour"><span></span> /Hour</h3>
+                            </li>
+                            <li>
+                                <h3 id="per-day"><span></span> /Day</h3>
+                            </li>
+                            <li>
+                                <h3 id="per-week"><span></span> /Week</h3>
+                            </li>
+                            <li>
+                                <h3 id="per-month"><span></span> /Month</h3>
+                            </li>
+                            <li>
+                                <h3 id="per-year"><span></span> /Year</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="table-buttons">
+                        <li>
+                            <button class="table-clear">
+                                Clear Table <i class="fa-solid fa-circle-xmark"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <h3 id="total-days"><span></span> Days</h3>
+                        </li>
+                        <li>
+                            <h3 id="total-earned">£<span></span> Mined</h3>
+                        </li>
+                    </ul>
+                </div>
 
                 <thead>
                     <th>Date</th>
