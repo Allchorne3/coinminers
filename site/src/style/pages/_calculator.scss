@@ -7,7 +7,7 @@ body {
         gap: 3rem;
 
         @include m.tablet-small-min {
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 3fr;
         }
 
         // max-width: 1200px;
@@ -72,10 +72,6 @@ body {
                 font-size: 15px;
                 color: $black;
             }
-
-            &:not(:first-child) {
-                
-            }
         }
 
         .rates {
@@ -90,8 +86,27 @@ body {
                 }
 
                 h3 {
-                    background: $white;
+                    background: rgba($white, .95);
+                    color: $green-light;
+                    
+                    span {
+                        display: block;
+                        color: $black;
+                    }
                 }
+            }
+        }
+
+        #earnings-reached {
+            button {
+                width: 100%;
+                display: block;
+                padding: 10px 15px;
+                font-weight: bold;
+                font-size: $fs-4;
+                background: orange;
+                border: none;
+                border-radius: 5px;
             }
         }
 
