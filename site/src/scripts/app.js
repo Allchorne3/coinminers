@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Get the values of input fields after form submission
 		const hourlyProfit = parseFloat(document.querySelector('#hourly-profit').value)
-		const totalMined = parseFloat(document.querySelector('#total-mined').value)
+		const totalBalance = parseFloat(document.querySelector('#total-balance').value)
 		let iterations = parseInt(document.querySelector('#iterations').value)
 		// let earningsAim = parseInt(document.querySelector('#earnings-aim').value)
 		const endDate = document.querySelector('#end-date').value
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		const endDateObj = getEndDate(endDate)
 		let startDateObj
 		let daysTotal = document.querySelector('h3#total-days span')
-		let minedTotal = document.querySelector('h3#total-earned span')
+		let balanceTotal = document.querySelector('h3#total-earned span')
 		// let earningsReached = document.querySelector('#earnings-reached')
 		// let earningsReachedSpan = document.querySelector('#earnings-reached button span')
 
-		earnings = totalMined ? totalMined : 0
+		earnings = totalBalance ? totalBalance : 0
 
 		if (endDate && iterations) {
 			if (!document.querySelector('.error-message')) {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				const newRow = document.createElement('tr')
 				newRow.innerHTML = `
 					<td data-label="Day">Day ${i + 1} - ${currentDate((i + 1), startDateObj)}</td>
-					<td data-label="Total Mined">$${earnings.toFixed(2)}</td>
+					<td data-label="Total Balance">${earnings.toFixed(5)} USDT</td>
 				`
 			
 				tbody.appendChild(newRow)
@@ -137,12 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 
 			daysTotal.textContent = iterations
-			minedTotal.textContent = earnings.toFixed(2)
-			perHour.textContent =`$${hourlyProfit.toFixed(2)}`
-			perDay.textContent =`$${(hourlyProfit * 24).toFixed(2)}`
-			perWeek.textContent =`$${(hourlyProfit * 168).toFixed(2)}`
-			perMonth.textContent =`$${(hourlyProfit * 720 ).toFixed(2)}`
-			perYear.textContent =`$${(hourlyProfit * 8760).toFixed(2)}`
+			balanceTotal.textContent = `${earnings.toFixed(5)} USDT`
+			perHour.textContent =`${hourlyProfit.toFixed(5)} USDT`
+			perDay.textContent =`${(hourlyProfit * 24).toFixed(5)} USDT`
+			perWeek.textContent =`${(hourlyProfit * 168).toFixed(5)} USDT`
+			perMonth.textContent =`${(hourlyProfit * 720 ).toFixed(5)} USDT`
+			perYear.textContent =`${(hourlyProfit * 8760).toFixed(5)} USDT`
 		}
 	})
 

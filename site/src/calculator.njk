@@ -17,22 +17,16 @@ uniqueTitle: Calculator
             <form action="">
                 <div class="currency-input">
                     <label for="hourly-profit">Hourly Profit*</label>
-                    <input type="number" id="hourly-profit" step="0.01" required />
+                    <input type="number" id="hourly-profit" step="0.00001" required />
                 </div>
                 <div class="currency-input">
-                    <label for="total-mined" step="0.01">Current total mined (Optional)</label>
-                    <input type="number" id="total-mined" step="0.01" />
+                    <label for="total-balance" step="0.01">Current balance (Optional)</label>
+                    <input type="number" id="total-balance" step="0.00001" />
                 </div>
                 <div>
                     <label for="start-date">Start date (Optional)</label>
                     <input type="date" id="start-date" />
                 </div>
-                {# <div class="currency-input">
-                    <div>
-                        <label for="earnings-aim">Earnings aim (Optional)</label>
-                        <input type="number" id="earnings-aim" step="0.01" />
-                    </div>
-                </div> #}
             
                 <div class="choose">
                     <label>Choose <strong>ONE</strong> of the options</label>
@@ -89,25 +83,10 @@ uniqueTitle: Calculator
                             <h3 id="total-days"><span></span> Days</h3>
                         </li>
                         <li>
-                            <h3 id="total-earned">£<span></span> Mined</h3>
+                            <h3 id="total-earned"><span></span> Mined</h3>
                         </li>
                     </ul>
                 </div>
-
-                <thead>
-                    <th>Date</th>
-                    <th>Total Mined</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>September 30th 2023</td>
-                        <td>£0.00</td>
-                    </tr>
-                    <tr>
-                        <td>September 30th 2023</td>
-                        <td>£24.02</td>
-                    </tr>
-                </tbody>
             </table>
 
             <p class="pre-text">Awaiting your calculation...</p>
