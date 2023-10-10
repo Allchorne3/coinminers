@@ -1,7 +1,7 @@
 ---
 title: How to deposit into Stronghold
 date: 2023-10-10
-description: ""
+description: "This guide will take you through the process of depositing funds into Stronghold"
 category: stronghold
 ---
 
