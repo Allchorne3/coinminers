@@ -1,7 +1,7 @@
 ---
 title: Stronghold explained
 date: 2023-10-10
-description: ""
+description: "This guide will answer commonly asked questions about Stronghold"
 category: stronghold
 
 ---
