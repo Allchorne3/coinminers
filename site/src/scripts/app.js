@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				const newRow = document.createElement('tr')
 				newRow.innerHTML = `
 					<td data-label="Day">Day ${i + 1} - ${currentDate((i + 1), startDateObj)}</td>
-					<td data-label="Total Mined">£${earnings.toFixed(2)}</td>
+					<td data-label="Total Mined">$${earnings.toFixed(2)}</td>
 				`
 				
 				// if (earnings && earnings >= earningsAim && aimDay === -1) {
@@ -149,11 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			daysTotal.textContent = iterations
 			minedTotal.textContent = earnings.toFixed(2)
-			perHour.textContent =`£${hourlyProfit.toFixed(2)}`
-			perDay.textContent =`£${(hourlyProfit * 24).toFixed(2)}`
-			perWeek.textContent =`£${(hourlyProfit * 168).toFixed(2)}`
-			perMonth.textContent =`£${(hourlyProfit * 720 ).toFixed(2)}`
-			perYear.textContent =`£${(hourlyProfit * 8760).toFixed(2)}`
+			perHour.textContent =`$${hourlyProfit.toFixed(2)}`
+			perDay.textContent =`$${(hourlyProfit * 24).toFixed(2)}`
+			perWeek.textContent =`$${(hourlyProfit * 168).toFixed(2)}`
+			perMonth.textContent =`$${(hourlyProfit * 720 ).toFixed(2)}`
+			perYear.textContent =`$${(hourlyProfit * 8760).toFixed(2)}`
 		}
 	})
 
