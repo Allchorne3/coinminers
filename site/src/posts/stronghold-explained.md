@@ -74,5 +74,6 @@ You can enhance your earnings further by introducing new people to Stronghold. S
 The bonus' you will receive works as follows:
 
  - In the first level, you'll get 5% of whatever the referral deposits and 10% each time the referral collects funds.
- <!-- - In the second level, you'll get 5% of whatever the referral deposits and 10% each time the referral collects funds.
- - For the third level, you'll get 5% of whatever the referral deposits and 10% each time the referral collects funds. -->
+ - In the second level, you'll get 7% each time the referral collects funds
+ - In the third level, you'll get 5% each time the referral collects funds
+ - 
