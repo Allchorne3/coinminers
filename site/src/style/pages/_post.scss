@@ -79,14 +79,19 @@
             }
         }
 
+        ul:not(.first-level) {
+            padding-left: 2rem;
+        } 
+
         ul.first-level {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             list-style: none;
             gap: 1rem;
             padding-left: 0;
-
+            
             @include m.mobile-max {
+                grid-template-columns: 1fr;
             }
 
             & > li {

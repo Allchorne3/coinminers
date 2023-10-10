@@ -3,6 +3,7 @@ title: How to deposit bitcoin into ChainMine
 date: 2023-09-26
 description: ""
 category: chainmine
+eleventyExcludeFromCollections: true
 ---
 
 ***If you have already got a Kraken account, you can skip to step 3, otherwise, start at step 1***

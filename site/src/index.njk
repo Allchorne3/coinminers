@@ -6,7 +6,7 @@ uniqueTitle: CoinMiners
 
 <div class="hero">
     <div class="hero-body text-centered">
-        <h1 class="title">Guides</h1>
+        <h1 class="title">Coin miner guides</h1>
         <p>Below you will find some useful guides to help you on your journey.</p>
     </div>
 </div>
@@ -20,8 +20,11 @@ uniqueTitle: CoinMiners
                     <li>
                         <a href="#" data-target="all" id="allTab" class="active">All</a>
                     </li>
-                    <li>
+                    {# <li>
                         <a href="#" data-target="chainmine">Chain Mine</a>
+                    </li> #}
+                    <li>
+                        <a href="#" data-target="stronghold">Stronghold</a>
                     </li>
                 </ul>
             </div>
@@ -32,11 +35,17 @@ uniqueTitle: CoinMiners
             <ul role="list" class="posts">
                 <div class="content">
                     {% for post in collections.post | reverse%}
-                        {% if post.data.category === 'chainmine' %}
-                            <div id="chainmine">
+                        {% if post.data.category === 'stronghold' %}
+                            <div id="stronghold">
                                 {% include "posts/guide-item.njk" %}
                             </div>
                         {% endif %}
+
+                        {# {% if post.data.category === 'chainmine' %}
+                            <div id="chainmine">
+                                {% include "posts/guide-item.njk" %}
+                            </div>
+                        {% endif %} #}
 
                         {% if post.data.category === 'common' %}
                             <div id="common">

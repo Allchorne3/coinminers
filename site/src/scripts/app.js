@@ -131,17 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					<td data-label="Day">Day ${i + 1} - ${currentDate((i + 1), startDateObj)}</td>
 					<td data-label="Total Mined">$${earnings.toFixed(2)}</td>
 				`
-				
-				// if (earnings && earnings >= earningsAim && aimDay === -1) {
-				// 	console.log(`You reached ${earningsAim} on day ${i + 1}`)
-				// 	newRow.classList.add('row-active')
-				// 	earningsReachedSpan.textContent = `day ${i + 1} - ${currentDate((i + 1))}`
-				// 	earningsReached.classList.remove('hidden')
-				// 	aimDay = i + 1; // Update aimDay to the current day
-				// 	tbody.appendChild(newRow)
-				// 	table.appendChild(tbody)
-				// 	break; // Exit the loop when the aim is reached
-				// }
 			
 				tbody.appendChild(newRow)
 				table.appendChild(tbody)
