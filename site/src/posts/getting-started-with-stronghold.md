@@ -3,7 +3,7 @@ title: Getting started with Stronghold
 date: 2023-10-11
 description: "This guide will get your started on Stronghold from setup to renting your first mining machine"
 category: stronghold
-—--
+---
 
 1. Visit [https://strongholddigital.net/#/pages/register/register?_c=EHDD3T](https://strongholddigital.net/#/pages/register/register?_c=EHDD3T) to register for an account. This link will automatically add an invitation code (EHDD3T) which is needed to create the account. The registration form is straightforward, however I will outline the steps for each of the form fields:
 - **Enter email address**: As it says, enter your email address
