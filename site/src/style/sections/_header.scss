@@ -36,7 +36,12 @@ header {
             transform: scaleX(1);
         }
 
+        .logo {
+            margin-bottom: 1rem;
+        }
+
         justify-content: center;
+        flex-direction: column;
     }
     
     // Main nav
@@ -56,10 +61,6 @@ header {
                 color: $white;
                 }
             }
-        }
-
-        @include m.tablet-small-max {
-            display: none;
         }
     }
 
